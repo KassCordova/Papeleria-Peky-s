@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none; border:none;
+    text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 80.5%;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.navbar{
+    position: relative;
+    width: 100%;
+    background:#F6BAD2;
+    color: #000;
+    z-index: 100;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: center;
+    height: 90px;
+    align-items: center;
+}
+
+.menu-items{
+    order: 2;
+    display: flex;
+}
+
+
+.menu-items li{
+    list-style: none;
+    margin-left: 3rem;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.navbar a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover{
+    color: black;
+}
+
+.navbar ul li::after{ 
+     content: '';
+     height: 3px;
+     width: 0;
+     background: black;
+     position: absolute;
+     left: 0;
+     bottom: -8px;
+     transition: 0.5s;
+ }
+
+ .navbar ul li:hover::after{ 
+     width: 100%;
+
+  }
+
+header nav ul li a span {
+    margin-left: 10px;
+}
+
+
+section{
+    padding:5rem 9%;
+}
+
+.btn{
+    display: inline-block;
+    padding:1rem 10rem;
+    background:#29ABE2;
+    color:#fff;
+    font-size: 1.7rem;
+    border: 2px solid transparent;
+    border-radius: 5rem;
+    transition: all .50s ease;
+    margin-top: 40rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: translateX(10px);
+    border: 2px solid #1990BA;
+    background:transparent;
+    color: #1990BA;
+}
+
+.heading{
+    text-align: left;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+.heading span{
+    color: hotpink;
+}
+
+.products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.products .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    border: .1rem rgba(0, 0, 0, .1);
+    position: relative;
+}
+
+.products .box-container .box .discount{
+    position: absolute;
+    top: 1rem; left: 1rem;
+    padding: .7rem 1rem;
+    font-size: 2rem;
+    color: hotpink;
+    background: rgba(255, 51, 153, .05);
+    z-index: 1;
+    border-radius: .5rem;
+}
+
+.products .box-container .box .image{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.products .box-container .box .image img{
+    height: 25rem;
+}
+
+.products .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.products .box-container .box .image .icons{
+    position: absolute;
+    bottom: -7rem; left: 0; right: 0;
+    display: flex;
+}
+
+.products .box-container .box:hover .image .icons{
+    bottom: 0;
+}
+
+.products .box-container .box .image .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 100%;
+    background: lightpink;
+    color: #fff;
+}
+
+
+.products .box-container .box .image .icons a:hover{
+    background: #333;
+}
+
+.products .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.products .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.products .box-container .box .content .precio{
+    font-size: 2.5rem;
+    color: hotpink;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+
+.products .box-container .box .content .precio span{
+    font-size: 1.5rem;
+    color: #999;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+footer{
+    background:#FBB03B;
+    height: auto;
+    width: 100vw;
+    font-family: Poppins;
+    padding-top: 40px;
+    color: white;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i{
+    color: black;
+}
+
+.footer-bottom{
+    background: orange;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+
+@media (max-width:450px){
+    .heading{
+        font-size:3rem;
+    }
+}
